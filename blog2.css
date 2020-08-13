@@ -1,0 +1,126 @@
+body{
+    background-color: #444;
+}
+.container{
+    display:grid;
+    width: 95%;
+    margin:auto;
+    margin-top: 150px;
+    grid-template-columns: 5px repeat(7, 1fr);
+    grid-template-rows: 35px 80px 50px 500px 50px;
+    grid-template-areas:
+    "bk bk bk bk bk bk bk bk"
+    "hd hd hd hd hd hd hd hd"
+    "mb mb mb mb mb mb mb mb"
+    "bb bb bb bb bb bb bb bb"
+    "ft ft ft ft ft ft ft ft";
+}
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#inline{
+    padding: 10px;
+}
+#img2{
+    width: 60%;
+}
+.box{
+    /*border: 1px solid red;
+    background: #f8fa9d;*/
+    background: white;
+}
+a{
+    color: #2A77AA;
+    text-decoration: none;
+}
+.click{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    width: 100px;
+    height: 35px;
+    background: white;
+    padding: 6px;
+}
+.back{
+    grid-area: bk;
+}
+.header{
+    grid-area: hd;
+}
+h1{
+    font-size: 30px;
+    padding: 10px;
+}
+.middle{
+    grid-area: mb;
+    word-wrap: break-word;
+    padding: 12px;
+    color: #242A2F;
+}
+.bottom{
+    grid-area: bb;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    width: 80%;
+    height: 90%;
+    background-color: #e6e6e6;
+    border-radius: 2%;
+    padding: 10px;
+    color: #242A2F;
+    margin: 10px;
+}
+.sidebar{
+    width: 10%;
+    height: 90%;
+    margin: 50px;
+    font-size: 20px;
+    color: #242A2F;
+}
+li{
+    font-size: 17px;
+}
+.foot{
+    grid-area: ft;
+    background-color: grey;
+    color: white;
+}
+@media(max-width:1150px) {
+    .container{
+        display:grid;
+        width: 95%;
+        margin:auto;
+        margin-top: 150px;
+        grid-template-columns: 5px repeat(7, 1fr);
+        grid-template-rows: 35px 80px 50px 350px 50px;
+        grid-template-areas:
+        "bk bk bk bk bk bk bk bk"
+        "hd hd hd hd hd hd hd hd"
+        "mb mb mb mb mb mb mb mb"
+        "bb bb bb bb bb bb bb bb"
+        "ft ft ft ft ft ft ft ft";
+    }
+    .content{
+        width: 65%;
+        height: 90%;
+        background-color: #e6e6e6;
+        border-radius: 2%;
+        padding: 10px;
+        color: #242A2F;
+        margin: 10px;
+    }
+    .sidebar{
+        width: 30%;
+        height: 90%;
+        margin: 50px;
+        font-size: 17px;
+        color: #242A2F;
+    }
+}

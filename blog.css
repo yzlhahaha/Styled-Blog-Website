@@ -1,0 +1,223 @@
+@import "fontstyle.css";
+@import "background.css";
+@import "hyperlink.css";
+.container{
+    display:grid;
+    width: 95%;
+    margin:auto;
+    margin-top: 150px;
+    grid-template-columns: 5px repeat(7, 1fr);
+    grid-template-rows: 100px 40px 400px 50px;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd de de de de de de"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+}
+#inline1{
+    padding: 30px;
+}
+#inline2{
+    font-size: 50px; 
+    margin-top: 0px;
+}
+#inline3{
+    font-size: 20px;
+    padding: 10px;
+}
+#inline4{
+    color: white;
+}
+#poem{
+    font-size: 10px;
+    color: white;
+}
+.click{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+#click1{
+    width: 100px;
+    height: 35px;
+    background: #2A77AA;
+}
+#click2{
+    width: 120px;
+    height: 35px;
+    border: 1px solid #2A77AA;
+}
+#one, #two, #three{
+    width:20%;
+    height:83%;
+    border-radius: 2.5%;
+    padding: 10px;
+    margin-top:10px;
+    background-color: #e6e6e6;
+    font-size: 20px;
+    color: #2A77AA;
+    word-wrap: break-word;
+}
+#one{
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#two{
+    background-image: url(2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#three{
+    background-image: url(3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.postcontent{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.box{
+    /*border: 1px solid red;
+    background: #f8fa9d;*/
+    background: white;
+}
+.header{
+    grid-area:hd;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    grid-area:ft;
+    background-color: grey;
+    color: white;
+    justify-content: flex-start;
+}
+.sidebar{
+    grid-area:sd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 32px;
+}
+.description{
+    grid-area:de;
+    padding: 5px;
+    color: #242A2F;
+    word-wrap: break-word;
+    padding-left: 10%;
+}
+.content{
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.fa{
+    padding-left: 5px;
+}
+#authorinfo{
+    font-size: 8px;
+    padding-left: 10px;
+}
+#avatar{
+    padding-left: 30px;
+    width: 10%;
+    height: 10%;
+}
+@media(max-width:1150px) {
+    .container{
+        display:grid;
+        width: 95%;
+        margin:auto;
+        margin-top: 150px;
+        grid-template-columns: 120px repeat(7, 1fr);
+        grid-template-rows: 100px 75px 400px 50px;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "sd sd de de de de de de"
+        "sd sd main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+    }
+    .content{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #one, #two, #three{
+        width:59%;
+        height:23%;
+        border-radius: 2.5%;
+        padding: 10px;
+        margin-top:10px;
+        background-color: #e6e6e6;
+        font-size: 18px;
+        color: #2A77AA;
+        word-wrap: break-word;
+    }
+    #one{
+        background-image: url(1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    #two{
+        background-image: url(2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    #three{
+        background-image: url(3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    .click{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+    }
+    #click1{
+        width: 100px;
+        height: 35px;
+        background: #2A77AA;
+    }
+    #click2{
+        width: 120px;
+        height: 35px;
+        border: 1px solid #2A77AA;
+    }
+    a{
+        color: #2A77AA;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .description{
+        grid-area:de;
+        padding: 5px;
+        color: #242A2F;
+        word-wrap: break-word;
+        padding-left: 20%;
+    }
+    .postcontent{
+        color: whitesmoke;
+    }
+    #poem{
+        font-size: 4.5px;
+        color: white;
+    }
+}
